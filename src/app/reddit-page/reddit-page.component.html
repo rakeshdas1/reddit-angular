@@ -1,4 +1,9 @@
-<p>
-  It works!
-  
-</p>
+<div class="reddit-page">
+  <h2>/r/popular</h2>
+  <div class="reddit-posts" [hidden]="!redditPageListing">
+    <ul>
+      <li>Yea</li>
+      <li *ngFor="let post of redditPageListing.posts">{{post.title}}</li>
+    </ul>
+  </div>
+</div>

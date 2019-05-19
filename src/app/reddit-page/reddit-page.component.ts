@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { RedditFetcherService } from '../reddit/reddit-fetcher.service';
-import { redditListing } from '../reddit/reddit-listing.model';
+import { RedditListing } from '../reddit/reddit-listing.model';
 
 @Component({
   selector: 'app-reddit-page',
@@ -8,7 +8,7 @@ import { redditListing } from '../reddit/reddit-listing.model';
   styleUrls: ['./reddit-page.component.scss']
 })
 export class RedditPageComponent implements OnInit {
-  redditPageListing: redditListing;
+  redditPageListing: RedditListing;
 
   constructor(private redditService: RedditFetcherService) {}
 
@@ -22,5 +22,4 @@ export class RedditPageComponent implements OnInit {
         data => (this.redditPageListing = data)
       )
   }
-
 }
