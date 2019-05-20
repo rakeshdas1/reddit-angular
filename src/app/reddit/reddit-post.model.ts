@@ -2,7 +2,7 @@ import { Deserializer } from './deserializer.model';
 
 export class redditPost implements Deserializer {
     deserialize(input: any): this {
-        Object.assign(this, input);
+        Object.assign(this, input.data); 
         return this;
     }
     subreddit: string;
